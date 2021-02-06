@@ -1,6 +1,6 @@
 let allTasks = [];
 const BASE_SERVER_URL =
-  "http://sebastian-netzker.developerakademie.com/Gruppenarbeit/php/";
+"https://simonbesendorfer.com/join/php/";
 /**
  * This function will empty all entries in the add Task form. The previous added Information will not be changed
  */
@@ -159,7 +159,7 @@ function loadJSONFromServer() {
     return new Promise(function (resolve, reject) {
         let xhttp = new XMLHttpRequest();
         let proxy = determineProxySettings();
-        let serverURL = proxy + BASE_SERVER_URL + 'my_json.json';
+        let serverURL = /**proxy +*/ BASE_SERVER_URL + 'my_json.json';
         xhttp.open('GET', serverURL);
 
         xhttp.onreadystatechange = function (oEvent) {

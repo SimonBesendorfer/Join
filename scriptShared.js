@@ -50,7 +50,7 @@ function loadJSONFromServer() {
     return new Promise(function (resolve, reject) {
         let xhttp = new XMLHttpRequest();
         let proxy = 'https://cors-anywhere.herokuapp.com/';
-        let serverURL = proxy + BASE_SERVER_URL + 'my_json.json';
+        let serverURL = /**proxy +*/ BASE_SERVER_URL + 'my_json.json';
         xhttp.open('GET', serverURL);
 
         xhttp.onreadystatechange = function (oEvent) {

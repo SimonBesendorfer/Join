@@ -4,7 +4,7 @@ let status = 0;
 
 let allTasks = [];
 const BASE_SERVER_URL =
-  "http://sebastian-netzker.developerakademie.com/Gruppenarbeit/php/";
+  "https://simonbesendorfer.com/join/php/";
 
 /**
  * Creates item to the List, by every call of the function addTask()
@@ -149,7 +149,7 @@ function loadJSONFromServer() {
     return new Promise(function (resolve, reject) {
         let xhttp = new XMLHttpRequest();
         let proxy = determineProxySettings();
-        let serverURL = proxy + BASE_SERVER_URL + 'my_json.json';
+        let serverURL = /**proxy +*/ BASE_SERVER_URL + 'my_json.json';
         xhttp.open('GET', serverURL);
 
         xhttp.onreadystatechange = function (oEvent) {

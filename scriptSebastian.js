@@ -2,7 +2,7 @@ let n;
 let html;
 let allTasks = [];
 const BASE_SERVER_URL =
-  "http://sebastian-netzker.developerakademie.com/Gruppenarbeit/php/";
+  "https://simonbesendorfer.com/join/php/";
 
 /**
  * This function open the Popupmenu from the matrix
@@ -317,7 +317,7 @@ function loadJSONFromServer() {
   return new Promise(function (resolve, reject) {
     let xhttp = new XMLHttpRequest();
     let proxy = determineProxySettings();
-    let serverURL = proxy + BASE_SERVER_URL + "my_json.json";
+    let serverURL = /**proxy +*/ BASE_SERVER_URL + "my_json.json";
     xhttp.open("GET", serverURL);
 
     xhttp.onreadystatechange = function (oEvent) {
